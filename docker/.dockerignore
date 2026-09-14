@@ -1,0 +1,10 @@
+*.iml
+.gradle
+build
+*.log
+local.properties
+.idea
+*.gwt
+*.stacktrace
+.DS_Store
+hs_err_pid*.log
