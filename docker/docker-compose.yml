@@ -1,9 +1,10 @@
 version: '3.8'
 services:
   app:
-    build:.
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
     ports:
       - '8080:8080'
-    volumes:
-      -.:/app
-    command: ["sh", "-c", "./gradlew build -x test && java -jar build/libs/project.jar"]
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev

@@ -1,7 +1,7 @@
 FROM openjdk:21-jdk-slim AS build
 WORKDIR /app
-COPY..
-RUN./gradlew build -x test
+COPY . .
+RUN ./gradlew build -x test
 
 FROM openjdk:21-jdk-slim AS runtime
 WORKDIR /app
